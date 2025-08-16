@@ -1,0 +1,13 @@
+:root {
+	font-family: Arial, Helvetica, sans-serif;
+	color-scheme: dark light;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+body {
+	padding: 1.25rem;
+	font-size: 1rem;
+}

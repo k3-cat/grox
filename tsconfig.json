@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "bundler",
+
+		"strict": true,
+		"skipLibCheck": true,
+		"lib": ["ESNext"],
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx",
+
+		/* Styles */
+		"allowUnusedLabels": true,
+		"allowUnreachableCode": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+
+		/* paths */
+		"paths": {
+			"@/*": ["./src/*"],
+			"C/*": ["./src/components/*"],
+			"I/*": ["./src/interfaces/*"],
+			"S/*": ["./src/services/*"]
+		}
+	},
+	"include": ["types/**/*.d.ts", "src/**/*.ts", "src/**/*.tsx"]
+}

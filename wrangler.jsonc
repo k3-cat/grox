@@ -1,0 +1,44 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "grox",
+	"compatibility_flags": ["nodejs_als"],
+	"compatibility_date": "2025-08-01",
+	"main": "./src/index.tsx",
+
+	"minify": true,
+
+	"observability": {
+		"logs": {
+			"enabled": true,
+			"head_sampling_rate": 1,
+		},
+	},
+
+	"placement": { "mode": "smart" },
+
+	"assets": {
+		"directory": "./public",
+		"binding": "ASSETS",
+		"run_worker_first": true,
+	},
+
+	"vars": {
+		"NO_COLOR": "1",
+	},
+
+	"version_metadata": {
+		"binding": "CF_VERSION_METADATA",
+	},
+
+	"r2_buckets": [
+		{ "binding": "R2_CUBE", "bucket_name": "cube" },
+		{ "binding": "R2_STATIC", "bucket_name": "static" },
+		{ "binding": "R2_BACKUP", "bucket_name": "backup" },
+	],
+
+	"kv_namespaces": [
+		{ "binding": "KV_AUTH", "id": "27f5d7a1e3974828826ec85a1e74ed72" },
+		{ "binding": "KV_UPDATE", "id": "f2e685e4ffad481b8da804d1a7744811" },
+		{ "binding": "KV_CUBE", "id": "bfe0c5c769bd46b39fc2316d3670fb19" },
+	],
+}
