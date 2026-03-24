@@ -1,0 +1,12 @@
+chgrp acme /etc/letsencrypt/live
+chgrp acme /etc/letsencrypt/archive
+
+setfacl -m g::X /etc/letsencrypt/live
+setfacl -m g::X /etc/letsencrypt/archive
+
+setfacl -d -m g::rX /etc/letsencrypt/archive
+
+
+
+chmod g+s /usr/local/share/uv_cache
+setfacl -d -m o::rwX /usr/local/share/uv_cache

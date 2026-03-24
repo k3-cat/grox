@@ -1,0 +1,31 @@
+{
+	"name": "grox",
+	"type": "module",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy --minify",
+		"cf-typegen": "wrangler types ./types/worker-configuration.d.ts --env-interface CloudflareBindings",
+		"codegen": "graphql-codegen --config codegen.ts"
+	},
+	"dependencies": {
+		"@apollo/client": "^4.1.6",
+		"@hono/zod-validator": "^0.7.6",
+		"@sentry/cloudflare": "^10.45.0",
+		"graphql": "^16.13.1",
+		"hono": "^4.12.8",
+		"http-enums": "^1.0.5",
+		"jose": "^6.2.2",
+		"rxjs": "^7.8.2",
+		"zod": "^4.3.6"
+	},
+	"devDependencies": {
+		"@graphql-codegen/cli": "^6.2.1",
+		"@graphql-codegen/typescript": "^5.0.9",
+		"@graphql-codegen/typescript-operations": "^5.0.9",
+		"@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+		"@types/node": "^25.5.0",
+		"dotenv": "^17.3.1",
+		"prettier": "^3.8.1",
+		"wrangler": "^4.4.0"
+	}
+}
